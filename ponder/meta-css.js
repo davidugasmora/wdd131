@@ -40,12 +40,17 @@ selectElem.addEventListener('change', function(){
     document.getElementById(codeValue).style.color = 'red';
 })
 
-const newPara = document.createElement('p')
-newPara.innerText = "added text here"
+//const newPara = document.createElement('p');
+//newPara.innerText = "added text here";
 
-const topics = topics = document.querySelector('#topics')
+//const topics = topics = document.querySelector('#topics');
 
-topics.appendChild(newPara)
+//topics.appendChild(newPara);
 
-topics.innerHTML = "<p>This is it<p>"
-                    
+//topics.innerHTML = "<p>This is it<p>"
+
+const image = document.querySelector('img');
+image.setAttribute('src', 'images/html_js_css.jpg');
+image.setAttribute("alt", "New logo with black background");
+
+document.body.className = "blue";                    
