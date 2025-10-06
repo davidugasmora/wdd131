@@ -13,7 +13,9 @@ header, footer {
 
 nav a {
   padding: 20px;
+  text-decoration: none;
   display: none;
+  color: white;
 }
 
 #menu_button {
@@ -54,6 +56,12 @@ footer {
 
 @media screen and (min-width: 1000px) {
 
+  nav a {
+    display: inline;
+  }
+  #menu_button {
+    display: none;
+  }
   #img_container {
     grid-template-columns: repeat(3, 300px);
   }
