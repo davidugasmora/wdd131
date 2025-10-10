@@ -8,13 +8,18 @@
     <title>Cool Pics</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
+    <script defer src="logic.js"></script>
     <!-- https://davidugasmora.github.io/wdd131/prove/coolpics/index.html -->
 </head>
 <body>
     <header>
         <h1>Cool Pics📷</h1>
-        <button id="menu_button">Menu</button>
-        <nav>
+        <button class="menu_button">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </button>
+        <nav class="hide">
             <a href="#">Home</a>
             <a href="#">People</a>
             <a href="#">Places</a>
@@ -25,16 +30,38 @@
     <main>
         <h2>Current Work</h2>
         <section id="img_container">
-            <img src="cool-pic.jpg" alt="Cool pic1">
-            <img src="cool-pic.jpg" alt="Cool pic2">
-            <img src="cool-pic.jpg" alt="Cool pic3">
-            <img src="cool-pic.jpg" alt="Cool pic4">
-            <img src="cool-pic.jpg" alt="Cool pic5">
-            <img src="cool-pic.jpg" alt="Cool pic6">
-            <img src="cool-pic.jpg" alt="Cool pic7">
-            <img src="cool-pic.jpg" alt="Cool pic8">
-            <img src="cool-pic.jpg" alt="Cool pic9">
+            <figure>
+                <img src="cool-pic-sm.jpg" alt="Cool pic1">
+            </figure>
+            <figure>
+                <img src="cool-pic-sm.jpg" alt="Cool pic2">
+            </figure>
+            <figure>
+                <img src="cool-pic-sm.jpg" alt="Cool pic3">
+            </figure>
+            <figure>
+                <img src="cool-pic-sm.jpg" alt="Cool pic4">
+            </figure>
+            <figure>
+                <img src="cool-pic-sm.jpg" alt="Cool pic5">
+            </figure>
+            <figure>
+                <img src="cool-pic-sm.jpg" alt="Cool pic6">
+            </figure>
+            <figure>
+                <img src="cool-pic-sm.jpg" alt="Cool pic7">
+            </figure>
+            <figure>
+                <img src="cool-pic-sm.jpg" alt="Cool pic8">
+            </figure>
+            <figure>
+                <img src="cool-pic-sm.jpg" alt="Cool pic9">
+            </figure>
         </section>
+        <dialog>
+            <img>
+            <button class="close-viewer">X</button>
+        </dialog>
     </main>
     <footer>©2025 Nonexistent Page</footer>
 </body>
