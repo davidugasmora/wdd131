@@ -1,0 +1,19 @@
+body {
+    font-family: sans-serif, Arial;
+}
+
+header, footer {
+    text-align: center;
+
+    
+}
+
+.main-nav {
+    list-style: none;
+    border-top: 2px solid yellow;
+    border-bottom: 2px solid yellow;
+}
+
+.main-nav a {
+    text-decoration: none;
+}
