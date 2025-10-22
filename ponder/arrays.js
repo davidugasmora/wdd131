@@ -3,7 +3,7 @@ const steps = ['one', 'two', 'three'];
 // .forEach()
 steps.forEach(function(step){
     console.log(step);
-})
+});
 
 
 let myList = document.querySelector('#myList');
@@ -67,7 +67,7 @@ const words = ['watermelon', 'peach', 'apple', 'tomato', 'grape'];
 
 const shortWords = words.filter(function(word){
     return word.length < 6;
-})
+});
 
 console.log(shortWords)
 
