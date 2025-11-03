@@ -1,0 +1,81 @@
+#cardContainer {
+    margin-top: 200px;
+    display: grid;
+    grid-template-columns: 100px 300px 100px;
+    grid-template-rows: 50px 150px 50px 50px;
+    justify-content: center;
+    justify-content: baseline;
+}
+
+#cardFront {
+    z-index: 1;
+    border-radius: 10px;
+    background-color: lightgray;
+    padding: 15px;
+    box-shadow: 1px 1px 5px black;
+    grid-column: 1/3;
+    grid-row: 1/3;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+#cardIcon {
+    text-align: right;
+    font-size: 40px;
+    margin: 0;
+}
+
+#cardName {
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+#cardExpiration {
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+
+#cardExpiration input {
+    max-width: 40px;
+}
+
+#cardBack {
+    border-radius: 10px;
+    background-color: lightgray;
+    padding-top: 15px;
+    box-shadow: 1px 1px 5px black;
+    grid-column: 2/4;
+    grid-row: 2/4;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 2fr 1fr 3fr;
+}
+
+#blackLine {
+    max-height: 50%;
+    background-color: black;
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+
+#cardVerification {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    text-align: center;
+}
+
+#cardVerification input {
+    max-width: 60px;
+}
+
+#submitButton {
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: rgb(231, 227, 227);
+    box-shadow: 1px 1px 5px black;
+    border: 1px solid black;
+    max-height: 75%;
+    grid-column: 3/4;
+    grid-row: 4/5;
+}

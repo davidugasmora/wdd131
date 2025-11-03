@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A credic card example.">
+    <meta name="author" content="David Ugas Mora">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <script defer src="logic.js"></script>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <title>Credit Card</title>
+    <!-- https://davidugasmora.github.io/wdd131/creditcard/blog/index.html -->
+</head>
+<body>
+    <main>
+        <div id="cardContainer">
+            <div id="cardFront">
+                <p id="moneyTotal" aria-label="Total 199">TOTAL: $199</p>
+                <P id="cardIcon" aria-label="Credit card icon">💳</P>
+                <div id="cardNumber">
+                    <label for="cardNumber">CARD NUMBER</label>
+                    <input type='text' id="creditCardNumber" name="creditCardNumber" pattern="[0-9]{16}" placeholder="1234 5678 9101 1020" aria-labelledby="cardNumber" required>
+                </div>
+                <div id="cardName">
+                    <label for="cardHolder">CARD HOLDER</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="John Doe" aria-labelledby="cardName" required>
+                </div>
+                <div id="cardExpiration">
+                    <label for="expirationDate">EXPIRATION</label>
+                    <input type='text' id='month' name="expMonth" placeholder="MM" aria-labelledby="expirationDate" required>
+                    <input type='text' id='year' name="expYear" placeholder="YY" aria-labelledby="expirationDate" required>
+                </div>
+            </div>
+            <div id="cardBack">
+                <div id="blackLine"></div>
+                <div id="cardVerification">
+                    <label for="cardVerification">CVC/CVV</label>
+                    <input type='text' id="creditCardVerification" name="creditCardVerification" pattern="[0-9]{3}" placeholder="xxx" aria-label="Card Verification Value" required>
+                </div>
+            </div>
+            <button id="submitButton" type="submit">Submit</button>
+        </div>
+        
+    </main>
+</body>
+</html>
