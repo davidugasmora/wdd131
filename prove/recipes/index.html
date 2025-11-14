@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Open Graph (Facebook, LinkedIn, etc.) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Recipe Book">
+    <meta property="og:description" content="An example of how to use flexbox with a cookbook website.">
+    <meta property="og:url" content="https://davidugasmora.github.io/wdd131/prove/recipes/index.htm">
+    <meta property="og:image" content="images/recipe-book.png">
+
+    <!-- X Card -->
+    <meta name="twitter:card" content="Social Preview Image">
+    <meta name="twitter:title" content="Recipe Book">
+    <meta name="twitter:description" content="An example of how to use flexbox with a cookbook website.">
+    <meta name="twitter:image" content="images/recipe-book.png">
+
+    <!-- One Apple Touch Icon (iOS home screen) -->
+    <link rel="apple-touch-icon" href="images/recipe-book.png">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An example of how to use flexbox with a cookbook website.">
+    <meta name="author" content="David Ugas Mora">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <script defer src="logic.js"></script>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <title>Recipe Book</title>
+    <!-- https://davidugasmora.github.io/wdd131/prove/recipes/index.html -->
+</head>
+<body>
+    <header>
+        <div id="tittle">
+            <img id="tittle-icon" src="images/recipe-book.png" alt="Icon of a recipe book">
+            <h1>RecipeBook</h1>
+        </div>
+        <div id="search-bar-container">
+            <input type="text" id="search-bar" placeholder="Find a recipe" aria-label="Search bar">
+            <img id="search-icon" src="images/search.svg" alt="Search Icon">
+        </div>
+    </header>
+    <main>
+        <div class="div-line"></div>
+        <article class="recipe">
+            <img class="recipe-img" src="images/apple-crisp.jpg" alt="Apple crisp image">
+            <div class="recipe-tittle">
+                <button class="type">dessert</button>
+                <h2>Apple Crisp</h2>
+                <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
+                    <span aria-hidden="true" class="icon-star">⭐</span>
+                    <span aria-hidden="true" class="icon-star">⭐</span>
+                    <span aria-hidden="true" class="icon-star">⭐</span>
+                    <span aria-hidden="true" class="icon-star">⭐</span>
+                    <span aria-hidden="true" class="icon-star-empty">☆</span>
+                </span>
+                <p class="description">This apple crisp recipe is a simple yet delicious fall dessert that's great served warm with vanilla ice cream</p>
+            </div>
+            
+        </article>
+    </main>
+    <footer>
+        <div class="social">
+            <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
+            <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon"></a>
+            <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon"></a>
+            <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a>
+        </div>
+        <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>  
+    </footer>
+</body>
+</html>

@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+
+
+header, main, footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#tittle {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+#tittle-icon {
+    width: 100px;
+    height: auto;
+}
+
+h1 {
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 900;
+    font-size: 70px;
+}
+
+#search-bar-container {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+#search-bar {
+    border: none;
+    border-right: 2px solid black;
+    width: 315px;
+}
+
+#search-icon {
+    width: 20px;
+}
+
+.div-line {
+    width: 355px;
+    height: 2px;
+    background-color: rgb(232, 230, 230);
+    margin: 10px;
+}
+
+.recipe {
+    display: flex;
+    flex-direction: column;
+    width: 330px;
+    padding: 11px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.recipe-img {
+    width: 330px;
+    align-self: center;
+}
+
+.type {
+    background-color: rgb(232, 230, 230);
+    border: 2px solid lightgray;
+    border-radius: 2px;
+    font-size: 17px;
+    width: 60px;
+    margin-top: 3px;
+}
+
+.recipe-tittle {
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-family: "Amatic SC", sans-serif;
+    color: #5bb0e7;
+    font-size: 35px;
+}
+
+.description {
+    display: none;
+}
+
+.social {
+    display: flex;
+    gap: 5px;
+    margin: 20px;
+}
+
+.social img {
+    width: 30px;
+    height: 30px;
+}
+
+@media screen and (min-width: 750px) {
+    #tittle-icon {
+        width: 140px;
+    }
+    h1 {
+        font-size: 90px;
+        margin-top: 90px;
+    }
+    #search-bar {
+        width: 656px;
+    }
+    #search-icon {
+        width: 30px;
+    }
+    .div-line {
+        width: 700px;
+    }
+    .recipe {
+        flex-direction: row;
+        width: 680px;
+        gap: 20px;
+    }
+    .type {
+        font-size: 20px;
+        width: 67px;
+        margin-top: 0;
+    }
+    .description {
+        display: inline;
+    }
+    footer {
+        flex-direction: row-reverse;
+        justify-content: space-around;
+    }
+}
