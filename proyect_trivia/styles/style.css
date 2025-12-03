@@ -36,7 +36,7 @@ main {
     justify-items: center;
     gap: 50px;
     margin: 40px;
-    margin-bottom: 70px;
+    margin-bottom: 100px;
     margin-top: 30px;
 }
 
@@ -58,6 +58,9 @@ main {
 }
 
 footer {
+    color: white;
     background-color: #1A508B;
-    height: 60px;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 10px;
 }
