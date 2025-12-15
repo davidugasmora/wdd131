@@ -103,10 +103,26 @@ main {
     margin-right: 5px;
 }
 
-.answer:hover, .answer.selected {
+.answer:hover {
     background-color: #1E89FF;
     color: white;
     cursor: pointer;
+}
+
+.answer.selected,
+.answer.selected:hover {
+    background-color: #1E89FF;
+    color: white;
+}
+
+.answer.correct {
+  background-color: #2ecc71 !important;
+  color: white !important;
+}
+
+.answer.wrong {
+  background-color: #e74c3c !important;
+  color: white !important;
 }
 
 #submit {

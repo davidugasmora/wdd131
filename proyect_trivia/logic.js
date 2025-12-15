@@ -373,11 +373,15 @@ let popCultureButton = document.querySelector(".selection-card-popculture");
 
 let selectionContainer = document.querySelector("#selection-container");
 let questionContainer = document.querySelector("#question-container")
+let scoreContainer = document.querySelector("#score-container");
 
 mainButton.addEventListener("click", changePage);
 animalButton.addEventListener("click", changePage);
 geographyButton.addEventListener("click", changePage);
 popCultureButton.addEventListener("click", changePage);
+
+questionContainer.addEventListener("click", showSelectedAnswer);
+questionContainer.addEventListener("click", showAndCountResults)
 
 function shuffleArray(array) {
   let shuffled = [...array];
@@ -404,7 +408,7 @@ function answerTemplate(answers) {
 }
 
 function questionTemplate(question) {
-    return `<article class="question-card">
+    return `<article class="question-card" data-correct="${question.correctAnswer}">
                 <p class="question-text">${question.question}</p>
                 ${answerTemplate(question.possibleAnswers)}
             </article>`
@@ -447,4 +451,68 @@ function changePage(event) {
             showQuestions(htmlQuestions(popCultureQuestion, "pop culture"))
             break;
     }
+}
+
+function showSelectedAnswer(event) {
+
+  if (!event.target.classList.contains("answer")) return;
+
+  let questionCard = event.target.closest(".question-card");
+  if (!questionCard) return;
+
+  const allAnswers = questionCard.querySelectorAll(".answer");
+  allAnswers.forEach(button => button.classList.remove("selected"));
+
+  event.target.classList.add("selected");
+}
+
+function showAndCountResults(event) {
+  if (event.target.id !== "submit") return;
+
+  let questionCards = questionContainer.querySelectorAll(".question-card");
+  let score = 0;
+
+  questionCards.forEach(card => {
+    let correct = card.dataset.correct;
+    let selected = card.querySelector(".answer.selected");
+
+    let answerButtons = card.querySelectorAll(".answer");
+
+    answerButtons.forEach(btn => {
+
+      btn.classList.remove("correct", "wrong");
+
+      if (btn.textContent === correct) {
+        btn.classList.add("correct");
+      }
+    });
+
+    if (selected) {
+      if (selected.textContent === correct) {
+        score++;
+        selected.classList.add("correct");
+      } else {
+        selected.classList.add("wrong");
+      }
+    }
+  })
+
+  if (event.target.id === "submit") {
+      event.target.disabled = true;   // prevents clicking again
+      event.target.style.opacity = "0.5";  // optional visual feedback
+      event.target.style.cursor = "not-allowed"; // optional
+  }
+
+  showScore(score, questionCards.length);
+}
+
+function showScore(score, total) {
+  const scoreHTML = `
+    <div id="score-box">
+      <h2>Your Score: ${score} / ${total}</h2>
+      <p>Click on the Quizzes logo to try again!</p>
+    </div>
+  `;
+
+  questionContainer.innerHTML += scoreHTML;
 }
